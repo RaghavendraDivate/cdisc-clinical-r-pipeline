@@ -1,6 +1,7 @@
 .Rhistory
 .RData
 .Rproj.user/
+~$*
 *.rds
-*.png
-*.docx
+!output/*.png
+!output/*.docx
