@@ -1,0 +1,28 @@
+==============================================================================
+                       CLINICAL PROGRAMMING QC & TEST REPORT                   
+==============================================================================
+Date/Time:        2026-09-01 13:10:37.32693 
+Primary Script:   04_table_efficacy.R
+Validation Script: 08_validation_and_qc.R (Independent Re-execution)
+Target Output:    Table 3 - ADAS-Cog Total Score at Week 24 (LOCF)
+==============================================================================
+
+--- STEP 1: VERIFYING REQUIREMENTS & POPULATION FLAGS ---
+[CHECK 1.1] Master ITT Subject Count (ADSL): 254 
+
+--- STEP 2: RUNNING INDEPENDENT VALIDATION PIPELINE ---
+Validation summary dataset calculated successfully.
+
+--- STEP 3: RECONCILIATION (PRIMARY VS. VALIDATION) ---
+[RESULT]: PASS - 0 Discrepancies detected between Primary and Validation outputs.
+
+--- STEP 4: FORMAL TEST CASE MATRIX EXECUTION LOG ---
+    Test_ID                                                       Description Status
+1 TC_EFF_01                  Verify ITT population flag filter (ITTFL == 'Y')   PASS
+2 TC_EFF_02         Verify LOCF record isolation flag filter (ANL01FL == 'Y')   PASS
+3 TC_EFF_03            Verify baseline change calculation (CHG = AVAL - BASE)   PASS
+4 TC_EFF_04 Reconcile row counts and summary means against independent script   PASS
+
+==============================================================================
+                       END OF QC & VALIDATION REPORT                           
+==============================================================================
