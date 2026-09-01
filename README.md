@@ -39,17 +39,23 @@ cdisc-clinical-r-pipeline/
     ├── Figure2_AE_Incidence.png
     ├── Table_4_Summary_Statistics.docx
     └── QC_Validation_Report.txt
+
 Technical Stack & Dependencies
 ⚬	Language: R (v4.0+)
 ⚬	Data Manipulation: tidyverse (dplyr, tidyr, stringr, forcats)
 ⚬	Reporting & Formatting: flextable, officer
 ⚬	Data Visualization: ggplot2
 ⚬	Validation & QC: diffdf
+
 Getting Started
+
 Prerequisites
 Ensure you have the required R packages installed prior to running the pipeline:
 install.packages(c("tidyverse", "flextable", "officer", "diffdf"))
+
+
 Execution Order
+
 Run the scripts sequentially from 01 to 08 to generate all clinical outputs and validate calculations:Rscript 01_data_ingestion.R
 Rscript 02_table_demographics.R
 Rscript 03_table_safety.R
@@ -58,7 +64,10 @@ Rscript 05_documentation_and_summary.R
 Rscript 06_visualization.R
 Rscript 07_Visualization_adverse_effects.R
 Rscript 08_validation_and_qc.R
+
+
 Quality Control & Double Programming
+
 Regulatory submission standards require independent validation. Script 08 (08_validation_and_qc.R) acts as the Quality Control protocol, executing a parallel derivation of primary analysis objects and comparing them against the production datasets using diffdf::diffdf().
 ⚬	Pass Criteria: Zero mismatches across primary efficacy values (AVAL, CHG), population flag assignments, and cell-level table summaries.
 ⚬	QC Output: Audit logs are automatically exported to output/QC_Validation_Report.txt.
