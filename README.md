@@ -281,18 +281,26 @@ Performs independent derivation and reconciliation of key outputs.
 | **Table 3** | Primary Efficacy Analysis (LOCF) |
 | **Table 4** | Multi-visit Summary Statistics |
 
-### Figures
-
-| Figure | Content |
-| ------ | ------- |
-| **Figure 1** | ADAS-Cog Total Score Over Time (Line Chart) |
-| **Figure 2** | Adverse Event Incidence by Treatment Arm |
 
 ### Reports
 
 - **Automated Word Summary Report** — Formatted analysis tables
 - **Pipeline Documentation** — Functional specifications and derivation rules
 - **QC Validation Report** — Independent validation and reconciliation audit trail
+
+---
+
+## 🖼️ Figures
+
+### Figure 1: ADAS-Cog Efficacy Over Time
+![ADAS-Cog Efficacy Line Chart](Pipeline/output/Figure1_Efficacy_LineChart_Fixed.png)
+
+Change from baseline in ADAS-Cog Total Score across visits, by treatment arm, with LOCF-based endpoint handling for Week 24.
+
+### Figure 2: Adverse Event Incidence by Treatment Arm
+![AE Incidence by Treatment Arm](Pipeline/output/Figure2_AE_Incidence.png)
+
+Subject-level treatment-emergent adverse event incidence, summarized by System Organ Class and treatment arm.
 
 ---
 
