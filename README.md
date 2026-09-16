@@ -132,8 +132,8 @@ cdisc-clinical-r-pipeline/
 ├── README.md
 │   └── Project documentation
 │
-└── output/
-    ├── Figure1_Efficacy_LineChart.png
+└── Pipeline/output/
+    ├── Figure1_Efficacy_LineChart_Fixed.png
     ├── Figure2_AE_Incidence.png
     ├── Table_4_Summary_Statistics.docx
     └── QC_Validation_Report.txt
@@ -264,6 +264,20 @@ The pipeline generates the following key deliverables:
 * Automated Word summary report
 * Pipeline functional documentation
 * QC validation and reconciliation report
+
+---
+
+## 🖼️ Figures
+
+### Figure 1: ADAS-Cog Efficacy Over Time
+![ADAS-Cog Efficacy Line Chart](Pipeline/output/Figure1_Efficacy_LineChart_Fixed.png)
+
+Change from baseline in ADAS-Cog Total Score across visits, by treatment arm, with LOCF-based endpoint handling for Week 24.
+
+### Figure 2: Adverse Event Incidence by Treatment Arm
+![AE Incidence by Treatment Arm](Pipeline/output/Figure2_AE_Incidence.png)
+
+Subject-level treatment-emergent adverse event incidence, summarized by System Organ Class and treatment arm.
 
 ---
 
